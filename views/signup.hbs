@@ -1,0 +1,23 @@
+{{>header}}
+
+<form method="post" action="/api/signup" style="text-align: center;" class="p-3 mb-2 bg-info text-dark">
+  <h2>Đăng ký </h2>
+  {{#if msg}}
+  <div class="p-1 mb-2  ">
+    <p class="fw-bold  mb-0 fs-7 text-danger">{{msg}}</p>
+  </div>
+  {{/if}}
+  <label for="hovaten">Họ và tên</label>
+  <input type="text"  class="form-control border border-primary border-2" name="hovaten" id="hovaten" required >
+  <div class="hovaten error"></div>
+  <label for="anhdaidien">Ảnh đại diện</label>
+  <input type="text"  class="form-control border border-primary border-2" name="anhdaidien" id="anhdaidien" required >
+  <div class="anhdaidien error"></div>
+  <label for="username">username</label>
+  <input type="text"  class="form-control border border-primary border-2" name="username" id="username" required >
+  <div class="username error"></div>
+  <label for="password">Password</label>
+  <input type="password" name="password" class="form-control border border-primary border-2"/>
+  <div class="password error"></div>
+  <button type="submit" class="btn btn-warning font-weight-bold" style="font-weight: bold;">Đăng ký</button>
+</form>
